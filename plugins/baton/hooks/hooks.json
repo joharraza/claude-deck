@@ -1,0 +1,1 @@
+{ "description": "Baton: task-boundary signals from tool calls and prompts, a Haiku break judge, idle and prompt-time compaction with a handoff summary, an AbovePrompt band and /baton", "modules": ["./register.tsx"] }

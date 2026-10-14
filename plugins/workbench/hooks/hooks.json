@@ -1,0 +1,1 @@
+{ "description": "Workbench: git and dev-server status line, a risk band above the prompt, a main-branch check on git commit and push, and /bench", "modules": ["./register.tsx"] }

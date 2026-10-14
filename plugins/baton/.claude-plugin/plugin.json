@@ -1,0 +1,9 @@
+{
+  "name": "baton",
+  "version": "0.1.0",
+  "description": "Compacts at the hand-off between tasks (a wrap-up, shipped work, a natural break), never mid-task, with a hand-off summary, and warns when the prompt cache has gone cold. The deck band shows it.",
+  "author": {
+    "name": "Johar Raza"
+  },
+  "types": "./types/index.d.ts"
+}

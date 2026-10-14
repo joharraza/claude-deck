@@ -1,0 +1,29 @@
+{
+  "name": "claude-deck",
+  "owner": {
+    "name": "Johar Raza"
+  },
+  "description": "One band above the Claude Code prompt for usage limits, context hand-offs and git, and the three mods that feed it.",
+  "plugins": [
+    {
+      "name": "deck",
+      "source": "./plugins/deck",
+      "description": "One band above the prompt: usage limits, context, hand-offs and git, with one message and its buttons when something needs you."
+    },
+    {
+      "name": "limit-radar",
+      "source": "./plugins/limit-radar",
+      "description": "Usage limits: auto-continue after a reset, and a hold on new subagents near the limit."
+    },
+    {
+      "name": "baton",
+      "source": "./plugins/baton",
+      "description": "Compacts between tasks, never mid-task, with a hand-off summary."
+    },
+    {
+      "name": "workbench",
+      "source": "./plugins/workbench",
+      "description": "Git and dev servers in view, and a check before Claude commits or pushes on main."
+    }
+  ]
+}

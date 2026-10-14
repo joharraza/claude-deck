@@ -1,0 +1,9 @@
+{
+  "name": "workbench",
+  "version": "0.1.0",
+  "description": "Keeps git and dev servers in view: warns when you are on main with changes, have commits not on GitHub, or hit a merge conflict, with Push, Branch off and Stop servers buttons, and asks before Claude commits or pushes on main. The deck band shows it.",
+  "author": {
+    "name": "Johar Raza"
+  },
+  "types": "./types/index.d.ts"
+}

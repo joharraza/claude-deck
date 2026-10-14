@@ -1,0 +1,9 @@
+{
+  "name": "limit-radar",
+  "version": "0.1.0",
+  "description": "Tracks the 5-hour and 7-day usage limits: picks a task back up on its own when a limit resets, and holds new subagents when a limit is close. The deck band shows it.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Johar Raza"
+  }
+}
