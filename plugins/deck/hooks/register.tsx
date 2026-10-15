@@ -130,7 +130,7 @@ export const register: Register = on => {
       $.clock.after(1000, () => $.ui.invalidate('ui.render'))
       return drawn
     }
-    note(`drew (${e.surface}${deck === null ? ', nothing measured yet' : ''})`)
+    note(`drew (${e.surface}${deck === null ? ', nothing measured yet' : ''}; maxRows ${e.props.maxRows}, window ${e.props.scroll.bodyRows} from ${e.props.scroll.offset}${drawn ? ', another band above' : ''})`)
     if (deck === null) return drawn
     const card = deck.message.card
     const buttons = card?.buttons ?? []
