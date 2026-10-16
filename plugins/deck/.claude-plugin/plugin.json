@@ -1,6 +1,6 @@
 {
   "name": "deck",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "One band above the prompt for Limit Radar, Baton and Workbench: liquid gauges for the 5-hour and 7-day limits and the context, a live git graph (a small radar and tank when no repository is open), and one message with its buttons when something needs you.",
   "author": { "name": "Johar Raza" },
   "types": "./types/index.d.ts",

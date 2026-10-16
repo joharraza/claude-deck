@@ -5,8 +5,10 @@ import { deckSvg } from './art.ts'
 import type { Card, Inputs } from './model.ts'
 import { MINUTE, buildDeck } from './model.ts'
 
-// Desktop: the room the buttons take at the band's right edge, in CSS pixels.
-const ACTIONS_W = 150
+// Desktop: the room the buttons take at the band's right edge. A Box measures
+// in cells (8 CSS pixels across, as the band's width assumes); the drawing in pixels.
+const ACTIONS_CELLS = 19
+const ACTIONS_W = ACTIONS_CELLS * 8
 
 const snoozedA = atom({ plugin: 'deck', key: 'snoozed' } as const, '')
 const hiddenA = atom({ plugin: 'deck', key: 'isHidden' } as const, false)
@@ -159,23 +161,23 @@ export const register: Register = on => {
     // are laid back over that room, so they sit inside the band. The main one
     // is filled, the rest outlined.
     const { Box, Button, Svg } = $.ui.resolve(e)
-    const actionsW = card && buttons.length > 0 ? ACTIONS_W : 0
+    const hasActions = !!card && buttons.length > 0
+    const actionsW = hasActions ? ACTIONS_W : 0
     const pic = deckSvg(deck, (cols - 3) * 8 - 8, actionsW)
     return (
       <Box flexDirection="column">
         {drawn}
         <Box key="deck" flexDirection="row" alignItems="center">
           <Svg source={pic.source} alt={pic.alt} width={pic.width} height={pic.height} />
-          {card && actionsW > 0 && (
+          {card && hasActions && (
             <Box
               key="deck-actions"
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
               gap={1}
-              width={actionsW}
-              height={pic.height}
-              marginLeft={-actionsW}
+              width={ACTIONS_CELLS}
+              marginLeft={-ACTIONS_CELLS}
               paddingX={2}
             >
               {buttons.map(b => (
